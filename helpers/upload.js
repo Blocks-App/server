@@ -16,6 +16,7 @@ const getPublicUrl = (filename) => {
   return `https://storage.googleapis.com/${CLOUD_BUCKET}/${filename.replace(/ /g, '')}`
 }
 
+// AUDIO
 const sendUploadToGCS = (req, res, next) => {
   if (!req.file) {
     return next()
@@ -64,4 +65,4 @@ module.exports = {
   getPublicUrl,
   sendUploadToGCS,
   multer
-}
+};
