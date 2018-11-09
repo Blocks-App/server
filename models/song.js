@@ -5,7 +5,7 @@ const MusicSchema = new Schema({
     title : String,
     artist : String,
     genre : String,
-    UserId : [{ type: Schema.Types.ObjectId, ref: 'User' }],
+    UserId : { type: Schema.Types.ObjectId, ref: 'User' },
     coverUrl : String,
     audioUrl : String
 })
